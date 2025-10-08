@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link href="css/formulario.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="formCadastro" action="#" method="post" onsubmit="return validarformulario()">
+        <label for="nome">Nome completo:</label><br>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha"><br><br>
+
+        <label for="confirmarSenha">Confirmar senha:</label><br>
+        <input type="password" id="confirmarSenha" name="confirmarSenha"><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone"><br><br>
+
+        <label for="dataNascimento">Data de nascimento:</label><br>
+        <input type="date" id="dataNascimento" name="dataNascimento"><br><br>
+
+        <label for="genero">Gênero:</label><br>
+        <select id="genero" name="genero">
+            <option value="">-- Selecione --</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+            <option value="nao_dizer">Prefiro não dizer</option>
+        </select><br><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+    <script>
+        function validarformulario() {
+            let inputNome = document.getElementById("nome")
+            if (inputNome.value == "") {
+                alert("O campo nome não pode estar em branco")
+                return false
+            }
+
+            let inputEmail = document.getElementById("email")
+            if (inputEmail.value == "") {
+                alert("O campo email não pode estar em branco")
+                return false
+            }
+            let inputSenha = document.getElementById("senha")
+            if (inputSenha.value == "") {
+                alert("O campo senha não pode estar em branco")
+                return false
+            }
+            let inputConfirmaSenha = document.getElementById("confirmarSenha")
+            if (inputConfirmaSenha.value == "") {
+                alert("O campo de confirmação de senha não pode estar em branco")
+                return false
+            }
+            let inputTelefone = document.getElementById("telefone")
+            if (inputTelefone.value == "") {
+                alert("O campo telefone não pode estar em branco")
+                return false
+            }
+            let inputData = document.getElementById("dataNascimento")
+            if (inputData.value == "") {
+                alert("O campo Data não pode estar em branco")
+                return false
+            }
+
+            let inputGenero = document.getElementById("genero")
+            if (inputGenero.value == "") {
+                alert("Selecione um Genero")
+                return false
+            }
+
+        
+        }
+    </script>
+</body>
+
+</html>
